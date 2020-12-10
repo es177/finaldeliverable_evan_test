@@ -21,7 +21,11 @@ interactive_panel_2 <- tabPanel(
                 min = as.Date("2019-06-01","%Y-%m-%d"),
                 max = as.Date("2020-05-31","%Y-%m-%d"),
                 value=as.Date("2020-05-31"),
-                timeFormat="%Y-%m-%d")
+                timeFormat="%Y-%m-%d"),
+    checkboxGroupInput(inputId = "daynight", 
+                       label = "Check day (D)/night (N) or both",
+                       choices = list("D", "N"), 
+                       selected = list("D", "N"))
       ),
     mainPanel(
       leafletOutput(outputId = "brightness_map")

@@ -32,12 +32,11 @@ server <- function(input, output) {
         color = ~palette_fn(prep_nasa_modis_brightness[["brightness"]]),
         fillOpacity = .7,
         radius = 3,
-        stroke = FALSE#,
-        #color = "red"
+        stroke = FALSE
       ) %>% 
       setView(133.54, -25.62, zoom = 4) %>% 
       addLegend(pal = palette_fn, na.label = "NA", bins = 5, 
-                values = ~brightness, title = "Brightnesss") 
+                values = ~brightness, title = "Brightnesss (Yellow is Hotter") 
   })
 
  #output$map <- renderLeaflet({

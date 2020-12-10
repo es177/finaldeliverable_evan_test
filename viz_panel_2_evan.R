@@ -45,7 +45,7 @@ leaflet(data = prep_nasa_modis_brightness) %>%
   addCircleMarkers(
     lat = ~latitude,
     lng = ~longitude,
-    label = ~paste0("The brightness is ", brightness, " fire pixels (Kelvin) on ", "2019-06-01"),
+    label = ~paste0("The brightness is ", brightness, " fire pixels (Kelvin) on ", acq_date),
     color = ~palette_fn(prep_nasa_modis_brightness[["2019-06-01"]]),
     fillOpacity = .7,
     radius = 1,

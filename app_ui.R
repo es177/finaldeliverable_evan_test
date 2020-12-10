@@ -11,11 +11,7 @@ intro_panel <- tabPanel(
 )
 
 ## Evan
-nasa_modis_brightness <- read_csv("fire_archive_M6_169855.csv")
 
-prep_nasa_modis_brightness <- nasa_modis_brightness %>% 
-  select(latitude, longitude, brightness, acq_date) %>% 
-  mutate(acq_date = as.Date(acq_date))
 
 interactive_panel_2 <- tabPanel(
   titlePanel("Fire Brightness/Intensity"),
